@@ -721,7 +721,7 @@ local OFF = {
 -- ========== 其他基址 ==========
 local addr_RemainingWeapons_base = getAddress('"' .. MODULE .. '"+114E35C')
 local addr_RemainingItems_base   = getAddress('"' .. MODULE .. '"+11508E0')
-local getSenderID                = getAddress('"' .. MODULE .. '"+1125FC0')
+local getSenderID                = getAddress('"' .. MODULE .. '"+1142A18')
 
 if not addr_RemainingWeapons_base or not addr_RemainingItems_base or not getSenderID then
     print("get remaining base failed")
