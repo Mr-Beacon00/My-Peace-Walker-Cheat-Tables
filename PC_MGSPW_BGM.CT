@@ -10,6 +10,7 @@
         <CheatEntry>
           <ID>284</ID>
           <Description>"slot 1 name"</Description>
+          <LastState RealAddress="7FF6EA409700"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>String</VariableType>
           <Length>50</Length>
@@ -21,6 +22,7 @@
         <CheatEntry>
           <ID>303</ID>
           <Description>"slot 1 address"</Description>
+          <LastState Value="00000294689DA100" RealAddress="7FF6EA409728"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>8 Bytes</VariableType>
@@ -29,6 +31,7 @@
         <CheatEntry>
           <ID>302</ID>
           <Description>"slot 2 name"</Description>
+          <LastState RealAddress="7FF6EA409738"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>String</VariableType>
           <Length>50</Length>
@@ -40,6 +43,7 @@
         <CheatEntry>
           <ID>301</ID>
           <Description>"slot 2 address"</Description>
+          <LastState Value="00000294689F9120" RealAddress="7FF6EA409760"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>8 Bytes</VariableType>
@@ -48,6 +52,7 @@
         <CheatEntry>
           <ID>304</ID>
           <Description>"slot 3 name"</Description>
+          <LastState RealAddress="7FF6EA409770"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>String</VariableType>
           <Length>50</Length>
@@ -59,6 +64,7 @@
         <CheatEntry>
           <ID>305</ID>
           <Description>"slot 3 address"</Description>
+          <LastState Value="0000029468AFF940" RealAddress="7FF6EA409798"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>8 Bytes</VariableType>
@@ -67,6 +73,7 @@
         <CheatEntry>
           <ID>306</ID>
           <Description>"slot 4 name"</Description>
+          <LastState RealAddress="7FF6EA4097A8"/>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>String</VariableType>
           <Length>50</Length>
@@ -78,6 +85,7 @@
         <CheatEntry>
           <ID>307</ID>
           <Description>"slot 4 address"</Description>
+          <LastState Value="0000000000000000" RealAddress="7FF6EA4097D0"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>8 Bytes</VariableType>
@@ -88,6 +96,7 @@
     <CheatEntry>
       <ID>300</ID>
       <Description>"bgm slot choose [0: no music]"</Description>
+      <LastState Value="3" RealAddress="7FF6EA4097E0"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+12A97E0</Address>
@@ -95,18 +104,21 @@
     <CheatEntry>
       <ID>102</ID>
       <Description>"bgm set [1: start play, 2: disable until reload 5: walkman music]"</Description>
+      <LastState Value="1" RealAddress="7FF6EA4097EC"/>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+12A97EC</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>106</ID>
       <Description>"bgm continue [0: reset, 2: BGM not change]"</Description>
+      <LastState Value="2" RealAddress="7FF6EA388678"/>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+1228678</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>341</ID>
       <Description>"base?"</Description>
+      <LastState Value="007A7E9C" RealAddress="2946A5B9AE0"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -118,6 +130,7 @@
     <CheatEntry>
       <ID>355</ID>
       <Description>"zeke koi"</Description>
+      <LastState Value="00725000" RealAddress="2946A5B9D98"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -129,6 +142,7 @@
     <CheatEntry>
       <ID>357</ID>
       <Description>"koi unused"</Description>
+      <LastState Value="005EE000" RealAddress="2946A5B9DA4"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -140,6 +154,7 @@
     <CheatEntry>
       <ID>358</ID>
       <Description>"volume stuff?"</Description>
+      <LastState Value="16" RealAddress="7FF6EA45E273"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>Byte</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+12FE273</Address>
@@ -147,6 +162,7 @@
     <CheatEntry>
       <ID>356</ID>
       <Description>"zeke mock"</Description>
+      <LastState Value="001F6000" RealAddress="2946A5B9DBC"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -158,6 +174,7 @@
     <CheatEntry>
       <ID>354</ID>
       <Description>"outer 3"</Description>
+      <LastState Value="0013C800" RealAddress="2946A5B9DB0"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -169,6 +186,7 @@
     <CheatEntry>
       <ID>351</ID>
       <Description>"bgm96_additional06 flag?"</Description>
+      <LastState Value="0008F000" RealAddress="2946A5B9EB8"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -180,6 +198,7 @@
     <CheatEntry>
       <ID>352</ID>
       <Description>"bgm96_additional06 size"</Description>
+      <LastState Value="7F239094" RealAddress="2946A5B9EBC"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -191,6 +210,7 @@
     <CheatEntry>
       <ID>353</ID>
       <Description>"bgm96_additional06 offset"</Description>
+      <LastState Value="7F239094" RealAddress="2946A5B9EBC"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -202,6 +222,7 @@
     <CheatEntry>
       <ID>348</ID>
       <Description>"sebgm_title_noise_1 flag?"</Description>
+      <LastState Value="00117800" RealAddress="2946A5B9B70"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -213,6 +234,7 @@
     <CheatEntry>
       <ID>349</ID>
       <Description>"sebgm_title_noise_1 size"</Description>
+      <LastState Value="5BB0AA23" RealAddress="2946A5B9B74"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -224,6 +246,7 @@
     <CheatEntry>
       <ID>350</ID>
       <Description>"sebgm_title_noise_1 offset"</Description>
+      <LastState Value="00B26800" RealAddress="2946A5B9B78"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -235,6 +258,7 @@
     <CheatEntry>
       <ID>347</ID>
       <Description>"bgm05_menu1 flag?"</Description>
+      <LastState Value="001AA800" RealAddress="2946A5B9B04"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -246,6 +270,7 @@
     <CheatEntry>
       <ID>345</ID>
       <Description>"bgm05_menu1 size"</Description>
+      <LastState Value="14A61261" RealAddress="2946A5B9B08"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -257,6 +282,7 @@
     <CheatEntry>
       <ID>346</ID>
       <Description>"bgm05_menu1 offset"</Description>
+      <LastState Value="0010A800" RealAddress="2946A5B9B0C"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -268,6 +294,7 @@
     <CheatEntry>
       <ID>344</ID>
       <Description>"bgm99_additional09 flag?"</Description>
+      <LastState Value="000E9000" RealAddress="2946A5B9EDC"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -279,6 +306,7 @@
     <CheatEntry>
       <ID>342</ID>
       <Description>"bgm99_additional09 size"</Description>
+      <LastState Value="20FFCB14" RealAddress="2946A5B9EE0"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -290,6 +318,7 @@
     <CheatEntry>
       <ID>343</ID>
       <Description>"bgm99_additional09 offset"</Description>
+      <LastState Value="05ECD000" RealAddress="2946A5B9EE4"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -301,6 +330,7 @@
     <CheatEntry>
       <ID>337</ID>
       <Description>"current p"</Description>
+      <LastState Value="0001F000" RealAddress="7FF6EA409730"/>
       <ShowAsHex>1</ShowAsHex>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+12A9730</Address>
@@ -308,6 +338,7 @@
     <CheatEntry>
       <ID>328</ID>
       <Description>"walkman stuff"</Description>
+      <LastState Value="4" RealAddress="7FF6EA38867C"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+122867C</Address>
@@ -315,6 +346,7 @@
     <CheatEntry>
       <ID>318</ID>
       <Description>"main mission number (mission selector music)"</Description>
+      <LastState Value="34" RealAddress="7FF6EA2A7878"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+1147878</Address>
@@ -322,12 +354,14 @@
     <CheatEntry>
       <ID>320</ID>
       <Description>"WALKMAN music ID"</Description>
+      <LastState Value="0" RealAddress="7FF6EA40B66C"/>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+12AB66C</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>324</ID>
       <Description>"WALKMAN play status [10: next, 11: start play, 14, stop]"</Description>
+      <LastState Value="0" RealAddress="7FF6EA40B6B0"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+12AB6B0</Address>
@@ -335,6 +369,7 @@
     <CheatEntry>
       <ID>325</ID>
       <Description>"MUSIC header"</Description>
+      <LastState RealAddress="7FF6EA388618"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>String</VariableType>
       <Length>50</Length>
@@ -346,6 +381,7 @@
     <CheatEntry>
       <ID>326</ID>
       <Description>"slot now"</Description>
+      <LastState Value="0" RealAddress="7FF6EA388610"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+1228610</Address>
@@ -353,6 +389,7 @@
     <CheatEntry>
       <ID>327</ID>
       <Description>"current"</Description>
+      <LastState Value="0000000000000000" RealAddress="7FF6EA388648"/>
       <ShowAsHex>1</ShowAsHex>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>8 Bytes</VariableType>
@@ -361,37 +398,17 @@
     <CheatEntry>
       <ID>329</ID>
       <Description>"No description"</Description>
+      <LastState Value="4294967295" RealAddress="7FF6EA40B578"/>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+12AB578</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>330</ID>
       <Description>"walkman init stuff?"</Description>
+      <LastState Value="24" RealAddress="7FF6EA40B564"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+12AB564</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>331</ID>
-      <Description>"002B7E4B00006DFE"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <ShowAsSigned>0</ShowAsSigned>
-      <VariableType>8 Bytes</VariableType>
-      <Address>"METAL GEAR SOLID PEACE WALKER.exe"+1600144</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>333</ID>
-      <Description>"FFFFFFFF"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"METAL GEAR SOLID PEACE WALKER.exe"+160014C</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>334</ID>
-      <Description>"00006DFE"</Description>
-      <ShowAsHex>1</ShowAsHex>
-      <VariableType>4 Bytes</VariableType>
-      <Address>"METAL GEAR SOLID PEACE WALKER.exe"+1600158</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
