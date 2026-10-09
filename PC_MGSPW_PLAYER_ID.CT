@@ -3,7 +3,8 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"CO-OPS frequency player number"</Description>
+      <Description>"CO-OPS frequency player number?"</Description>
+      <LastState Value="36" RealAddress="7FF706E8CE08"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+110CE08</Address>
@@ -11,6 +12,7 @@
     <CheatEntry>
       <ID>1</ID>
       <Description>"Comrades number"</Description>
+      <LastState Value="36" RealAddress="7FF706E9BEE8"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+111BEE8</Address>
@@ -18,11 +20,13 @@
     <CheatEntry>
       <ID>17</ID>
       <Description>"Player info in current room"</Description>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
           <ID>4</ID>
           <Description>"Player 1 ID"</Description>
+          <LastState Value="00000000" RealAddress="7FF70728E054"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -31,6 +35,7 @@
             <CheatEntry>
               <ID>9</ID>
               <Description>"Player 1 Name"</Description>
+              <LastState RealAddress="7FF70728E05C"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -44,6 +49,7 @@
         <CheatEntry>
           <ID>5</ID>
           <Description>"Player 2 ID"</Description>
+          <LastState Value="00000000" RealAddress="7FF70728EBE8"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -52,6 +58,7 @@
             <CheatEntry>
               <ID>10</ID>
               <Description>"Player 2 Name"</Description>
+              <LastState RealAddress="7FF70728EBF0"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -65,7 +72,7 @@
         <CheatEntry>
           <ID>11</ID>
           <Description>"Player 3 ID"</Description>
-          <LastState Value="A21B3CE3" RealAddress="7FF6EA66F77C"/>
+          <LastState Value="00000000" RealAddress="7FF70728F77C"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -74,7 +81,7 @@
             <CheatEntry>
               <ID>6</ID>
               <Description>"Player 3 Name"</Description>
-              <LastState RealAddress="7FF6EA66F784"/>
+              <LastState RealAddress="7FF70728F784"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -88,7 +95,7 @@
         <CheatEntry>
           <ID>8</ID>
           <Description>"Player 4 ID"</Description>
-          <LastState Value="B239CCA1" RealAddress="7FF6EA670310"/>
+          <LastState Value="00000000" RealAddress="7FF707290310"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -97,7 +104,7 @@
             <CheatEntry>
               <ID>12</ID>
               <Description>"Player 4 Name"</Description>
-              <LastState RealAddress="7FF6EA670318"/>
+              <LastState RealAddress="7FF707290318"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -111,7 +118,7 @@
         <CheatEntry>
           <ID>13</ID>
           <Description>"Player 5 ID"</Description>
-          <LastState Value="00000000" RealAddress="7FF6EA670EA4"/>
+          <LastState Value="00000000" RealAddress="7FF707290EA4"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -120,7 +127,7 @@
             <CheatEntry>
               <ID>14</ID>
               <Description>"Player 5 Name"</Description>
-              <LastState RealAddress="7FF6EA670EAC"/>
+              <LastState RealAddress="7FF707290EAC"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -134,7 +141,7 @@
         <CheatEntry>
           <ID>15</ID>
           <Description>"Player 6 ID"</Description>
-          <LastState Value="00000000" RealAddress="7FF6EA671A38"/>
+          <LastState Value="00000000" RealAddress="7FF707291A38"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -143,7 +150,7 @@
             <CheatEntry>
               <ID>16</ID>
               <Description>"Player 6 Name"</Description>
-              <LastState RealAddress="7FF6EA671A40"/>
+              <LastState RealAddress="7FF707291A40"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -159,82 +166,106 @@
   </CheatEntries>
   <UserdefinedSymbols/>
   <LuaScript>local MODULE = "METAL GEAR SOLID PEACE WALKER.exe"
-local MODE = 1   -- 1 = Comrades screen, 2 = CO-OPS frequency?, 3 = Player info in current room
+local MODE = 2   -- 1 = Comrades screen, 2 = CO-OPS date, 3 = Player info in current room
 
--- ========== 通用工具函数 ==========
-local function safeGetAddress(expr)
-    local a = getAddress(expr)
-    if not a then
-        print("getAddress failed: " .. expr)
+getLuaEngine().mOutput.Clear()
+
+local function webkitToDate(webkitTimestamp)
+    if not webkitTimestamp or webkitTimestamp == 0 then
+        return nil, nil, nil
     end
-    return a
+    local unixSec = (webkitTimestamp - 11644473600000000) / 1000000
+    local t = os.date("*t", unixSec)
+    return t.year, t.month, t.day
 end
 
-local function printPlayer(index, idAddr, nameAddr)
-    if not idAddr or not nameAddr then return end
+-- ========== 收集一个玩家的数据（不打印）==========
+local function collectPlayer(idAddr, nameAddr)
+    if not idAddr or not nameAddr then return nil end
 
     local rawId = readInteger(idAddr)
-    if rawId == nil or rawId == 0 then return end
+    if not rawId or rawId == 0 then return nil end
 
     local SteamID3  = rawId ~ 0xB739CF89
     local SteamID64 = SteamID3 + 76561197960265728
 
-    local name = readString(nameAddr) or "&lt;no name&gt;"
-
-    print(string.format("[%d] %s", index, name))
-    print("https://steamcommunity.com/profiles/" .. tostring(SteamID64))
+    return {
+        name        = readString(nameAddr) or "&lt;no name&gt;",
+        camaraderie = readInteger(nameAddr + 0x108) or 0,
+        webkitTime  = readQword(nameAddr + 0x100) or 0,
+        steamID64   = SteamID64,
+    }
 end
 
--- ===9iomk ,======= MODE 1 / 2：动态列表 ==========
-local function handleListMode(baseExpr)
-    local base = safeGetAddress(baseExpr)
-    if not base then return end
+-- ========== 打印一个玩家 ==========
+local function printPlayer(p)
+    local year, month, day = webkitToDate(p.webkitTime)
+    print(string.format("%s [%04d-%02d-%02d]", p.name, year or 0, month or 0, day or 0))
+    print("https://steamcommunity.com/profiles/" .. tostring(p.steamID64))
+end
 
-    local addr_NUMBER = base
-    local addr_NAME   = base + 8
-    local addr_ID     = base + 24
-
-    local playerNumber = readInteger(addr_NUMBER)
-    if playerNumber == nil then
-        print("read player number failed")
+-- ========== 动态列表（MODE 1/2）==========
+-- sortByTime: true 则按 webkitTime 从高到低排序
+local function handleListMode(baseExpr, sortByTime)
+    local base = getAddress(baseExpr)
+    if not base then
+        print("getAddress failed: " .. baseExpr)
         return
     end
-    if playerNumber == 0 then
+
+    local playerNumber = readInteger(base)
+    if not playerNumber or playerNumber == 0 then
         print("no players")
         return
     end
 
-    local step = 272
+    -- 先收集所有玩家
+    local players = {}
     for i = 0, playerNumber - 1 do
-        local offset = i * step
-        printPlayer(i + 1, addr_ID + offset, addr_NAME + offset)
+        local offset = i * 272
+        local p = collectPlayer(base + 24 + offset, base + 8 + offset)
+        if p then
+            players[#players + 1] = p
+        end
+    end
+
+    -- 按 webkitTime 从高到低排序
+    if sortByTime then
+        table.sort(players, function(a, b)
+            return a.webkitTime &gt; b.webkitTime
+        end)
+    end
+
+    -- 打印
+    for _, p in ipairs(players) do
+        printPlayer(p)
     end
 end
 
--- ========== MODE 3：固定 4 个玩家 ==========
+-- ========== 固定列表（MODE 3）==========
 local function handleFixedMode()
-    -- 用表驱动，避免四段重复代码
-    local players = {
-        {id = '"' .. MODULE .. '"+150E054', name = '"' .. MODULE .. '"+150E05C'},
-        {id = '"' .. MODULE .. '"+150EBE8', name = '"' .. MODULE .. '"+150EBF0'},
-        {id = '"' .. MODULE .. '"+150F77C', name = '"' .. MODULE .. '"+150F784'},
-        {id = '"' .. MODULE .. '"+1510310', name = '"' .. MODULE .. '"+1510318'},
-        {id = '"' .. MODULE .. '"+1510EA4', name = '"' .. MODULE .. '"+1510EAC'},
-        {id = '"' .. MODULE .. '"+1511A38', name = '"' .. MODULE .. '"+1511A40'},
+    local addrs = {
+        '"' .. MODULE .. '"+150E054',
+        '"' .. MODULE .. '"+150EBE8',
+        '"' .. MODULE .. '"+150F77C',
+        '"' .. MODULE .. '"+1510310',
+        '"' .. MODULE .. '"+1510EA4',
+        '"' .. MODULE .. '"+1511A38',
     }
 
-    for i, p in ipairs(players) do
-        local idAddr   = safeGetAddress(p.id)
-        local nameAddr = safeGetAddress(p.name)
-        printPlayer(i, idAddr, nameAddr)
+    for _, idExpr in ipairs(addrs) do
+        local idAddr   = getAddress(idExpr)
+        local nameAddr = idAddr and (idAddr + 8)
+        local p = collectPlayer(idAddr, nameAddr)
+        if p then printPlayer(p) end
     end
 end
 
 -- ========== 分发 ==========
 if MODE == 1 then
-    handleListMode('"' .. MODULE .. '"+111BEE8')
+    handleListMode('"' .. MODULE .. '"+111BEE8', false)
 elseif MODE == 2 then
-    handleListMode('"' .. MODULE .. '"+110CE08')
+    handleListMode('"' .. MODULE .. '"+110CE08', true)   -- 排序
 elseif MODE == 3 then
     handleFixedMode()
 else
