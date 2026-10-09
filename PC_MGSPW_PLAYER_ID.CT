@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>0</ID>
-      <Description>"CO-OPS frequency player number?"</Description>
+      <Description>"player number"</Description>
       <LastState Value="36" RealAddress="7FF706E8CE08"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
@@ -11,7 +11,7 @@
     </CheatEntry>
     <CheatEntry>
       <ID>1</ID>
-      <Description>"Comrades number"</Description>
+      <Description>"Comrades player number"</Description>
       <LastState Value="36" RealAddress="7FF706E9BEE8"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
