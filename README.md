@@ -13,7 +13,7 @@ To use the script, go to **Table -> Show Cheat Table Lua Script** or just use `C
 Click **Execute script** to print information.
 
 - `local MODE = 1` — Print information from the Comrades screen.
-- Change to `2` — Print information from the heroes screen.
+- Change to `2` — Sort by last played time.
 - Change to `3` — Print player information in the current room.
 
 ## About Storage and Delivery Table
