@@ -2,6 +2,17 @@
 <CheatTable CheatEngineTableVersion="42">
   <CheatEntries>
     <CheatEntry>
+      <ID>384</ID>
+      <Description>"name [15]"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>15</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>"METAL GEAR SOLID PEACE WALKER.exe"+1142774</Address>
+    </CheatEntry>
+    <CheatEntry>
       <ID>0</ID>
       <Description>"player number"</Description>
       <LastState Value="0" RealAddress="7FF7491BCE08"/>
