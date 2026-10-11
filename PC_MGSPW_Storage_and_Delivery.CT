@@ -619,7 +619,8 @@
 
 -- ========== Config ==========
 local outbox_slot = 3 -- How many box will create
-local SENDER_NAME = "MR_BEACON00" -- Your name here
+-- local SENDER_NAME = "MR_BEACON00" -- Your name here
+local SENDER_NAME = getAddress('"' .. MODULE .. '"+1142774')
 local TARGET_NAME = "- FREE -" -- Target name
 
 --[[
