@@ -15,7 +15,6 @@
     <CheatEntry>
       <ID>0</ID>
       <Description>"player number"</Description>
-      <LastState Value="0" RealAddress="7FF7491BCE08"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+110CE08</Address>
@@ -23,7 +22,6 @@
     <CheatEntry>
       <ID>1</ID>
       <Description>"Comrades player number"</Description>
-      <LastState Value="0" RealAddress="7FF7491CBEE8"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>4 Bytes</VariableType>
       <Address>"METAL GEAR SOLID PEACE WALKER.exe"+111BEE8</Address>
@@ -37,7 +35,6 @@
         <CheatEntry>
           <ID>4</ID>
           <Description>"Player 1 ID"</Description>
-          <LastState Value="00000000" RealAddress="7FF7495BE054"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -46,7 +43,6 @@
             <CheatEntry>
               <ID>9</ID>
               <Description>"Player 1 Name"</Description>
-              <LastState RealAddress="7FF7495BE05C"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -60,7 +56,6 @@
         <CheatEntry>
           <ID>5</ID>
           <Description>"Player 2 ID"</Description>
-          <LastState Value="00000000" RealAddress="7FF7495BEBE8"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -69,7 +64,6 @@
             <CheatEntry>
               <ID>10</ID>
               <Description>"Player 2 Name"</Description>
-              <LastState RealAddress="7FF7495BEBF0"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -83,7 +77,6 @@
         <CheatEntry>
           <ID>11</ID>
           <Description>"Player 3 ID"</Description>
-          <LastState Value="00000000" RealAddress="7FF7495BF77C"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -92,7 +85,6 @@
             <CheatEntry>
               <ID>6</ID>
               <Description>"Player 3 Name"</Description>
-              <LastState RealAddress="7FF7495BF784"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -106,7 +98,6 @@
         <CheatEntry>
           <ID>8</ID>
           <Description>"Player 4 ID"</Description>
-          <LastState Value="00000000" RealAddress="7FF7495C0310"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -115,7 +106,6 @@
             <CheatEntry>
               <ID>12</ID>
               <Description>"Player 4 Name"</Description>
-              <LastState RealAddress="7FF7495C0318"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -129,7 +119,6 @@
         <CheatEntry>
           <ID>13</ID>
           <Description>"Player 5 ID"</Description>
-          <LastState Value="00000000" RealAddress="7FF7495C0EA4"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -138,7 +127,6 @@
             <CheatEntry>
               <ID>14</ID>
               <Description>"Player 5 Name"</Description>
-              <LastState RealAddress="7FF7495C0EAC"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -152,7 +140,6 @@
         <CheatEntry>
           <ID>15</ID>
           <Description>"Player 6 ID"</Description>
-          <LastState Value="00000000" RealAddress="7FF7495C1A38"/>
           <ShowAsHex>1</ShowAsHex>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>4 Bytes</VariableType>
@@ -161,7 +148,6 @@
             <CheatEntry>
               <ID>16</ID>
               <Description>"Player 6 Name"</Description>
-              <LastState RealAddress="7FF7495C1A40"/>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>String</VariableType>
               <Length>15</Length>
@@ -215,11 +201,11 @@ end
 local function printPlayer(p, showDate)
     if showDate then
         local year, month, day = webkitToDate(p.webkitTime)
-        print(string.format("%s [%04d-%02d-%02d]", p.name, year or 0, month or 0, day or 0))
+        print(string.format("%s [%s] [%04d-%02d-%02d]", p.name, p.camaraderie, year or 0, month or 0, day or 0))
     else
-        print(p.name)
+        print(p.name)   -- MODE 3：只输出名字，不输出 camaraderie
     end
-    print("https://steamcommunity.com/profiles/" .. tostring(p.steamID64))
+    print("https://steamcommunity.com/profiles/" .. tostring(p.steamID64) .. "\n")
 end
 
 
